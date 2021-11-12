@@ -1,4 +1,4 @@
-# Gentic_Algorithm
+# Genetic_Algorithm
 
 # Fitness Function
 
