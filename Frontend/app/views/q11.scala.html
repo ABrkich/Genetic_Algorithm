@@ -1,0 +1,44 @@
+@(message: String)
+<!DOCTYPE html>
+<html>
+
+    <style>
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+
+    <body>
+
+        <header class="topbar">
+            <h1 class="focused" style="font-size: 37px;
+                color: #57a957">
+                Query 1.1 Paper Search
+            </h1>
+
+        </header>
+
+        <div>
+            <p class="focused" style="font-size: 20px;
+            color: #3F51B5">
+                @message
+            </p>
+
+        </div>
+
+        <form action = "@routes.HomeController.q11Handler()" method="GET">
+            <label>Paper title</label>
+            <input type = "text" maxlength="100" id="title" name="title">
+            <button id="api-get-page"  class="button" type="submit">1.1 Paper Search</button>
+        </form>
+    </body>
+</html>

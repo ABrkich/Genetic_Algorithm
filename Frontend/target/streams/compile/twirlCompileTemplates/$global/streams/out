@@ -1,0 +1,4 @@
+[error] /Users/andrewbrkich/Desktop/CS_7340_Lab2/Frontend/app/views/q23.scala.html:6: Invalid '@' symbol
+[error]     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+[error]                                                           ^
+[error] (compile:twirlCompileTemplates) Twirl compilation failed

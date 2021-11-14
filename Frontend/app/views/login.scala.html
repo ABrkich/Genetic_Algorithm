@@ -1,0 +1,119 @@
+@(authorizeMessage: String)
+<!DOCTYPE html>
+<html>
+
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 5px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Play Setup Demo</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+            <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+    </head>
+    <body>
+
+        <header class="topbar">
+            <h1 class="focused" style="font-size: 37px;
+                color: #57a957">
+                <strong>Part 1 Queries</strong>
+            </h1>
+        </header>
+
+
+        <div class="grid-container">
+            <div class="grid-item">
+                <form action = "@routes.HomeController.query11()" method="GET">
+                    <button id="api-get-page"  class="button" type="submit">1.1 Paper Search</button>
+                </form>
+
+            </div>
+
+            <div class="grid-item">
+                <form action = "@routes.HomeController.query12()" method="GET">
+                    <button id="api-get-page" class="button" type="submit">1.2 Journal Search</button>
+                </form>
+            </div>
+            <div class="grid-item">
+                <form action = "@routes.HomeController.query13()" method="GET">
+                    <button id="api-get-page" class="button" type="submit">1.3 Author Title Search</button>
+                </form>
+            </div>
+            <div class="grid-item">
+                <form action = "@routes.HomeController.query14()" method="GET">
+                    <button id="api-get-page" class="button" type="submit">1.4 Authors With 10+ Papers</button>
+                </form>
+            </div>
+            <div class="grid-item"></div>
+            <div class="grid-item">
+                <form action = "@routes.HomeController.query15()" method="GET">
+                    <button id="api-get-page" class="button" type="submit">1.5 Conference Location Search</button>
+                </form>
+            </div>
+        </div>
+
+
+        <header class="topbar">
+            <h1 class="focused" style="font-size: 37px;
+                color: #57a957">
+                <strong>Part 2 Queries</strong>
+            </h1>
+        </header>
+
+
+        <div class="grid-container">
+            <div class="grid-item">
+                <form action = "@routes.HomeController.query21()" method="GET">
+                    <button id="api-get-page" class="button" type="submit">2.1 Author Paper Search</button>
+                </form>
+            </div>
+
+            <div class="grid-item">
+                <form action = "@routes.HomeController.query22()" method="GET">
+                    <button id="api-get-page" class="button" type="submit">2.2 Productive Authors Co-Authors</button>
+                </form>
+            </div>
+            <div class="grid-item">
+                <form action = "@routes.HomeController.query23()" method="GET">
+                    <button id="api-get-page" class="button" type="submit">2.3 Map of Conference Locations</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
