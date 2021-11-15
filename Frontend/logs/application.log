@@ -1,306 +1,56 @@
-2021-10-08 13:08:39,440 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-3 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2021-11-15 02:41:22,830 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-2 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2021-10-08 13:08:39,446 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-3 - Application started (Dev) (no global state)
-2021-10-08 13:08:51,479 [ERROR] from application in application-akka.actor.default-dispatcher-4 - 
-
-! @7lae7l14a - Internal server error, for (GET) [/query12Handler?title=IEEE+Trans.+Services+Computing&volume=9&issue=3] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[CompletionException: java.lang.RuntimeException: Error parsing JSON from WS response wsBody]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:351)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:267)
-	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:448)
-	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:446)
-	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:412)
-	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:92)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:81)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:92)
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41)
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:49)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.util.concurrent.CompletionException: java.lang.RuntimeException: Error parsing JSON from WS response wsBody
-	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
-	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
-	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:618)
-	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:591)
-	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:457)
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
-	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1067)
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1703)
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
-Caused by: java.lang.RuntimeException: Error parsing JSON from WS response wsBody
-	at play.libs.ws.JsonBodyReadables.lambda$json$0(JsonBodyReadables.java:31)
-	at play.libs.ws.ahc.StandaloneAhcWSResponse.getBody(StandaloneAhcWSResponse.java:119)
-	at play.libs.ws.ahc.AhcWSResponse.asJson(AhcWSResponse.java:120)
-	at controllers.HomeController.lambda$q12Handler$1(HomeController.java:86)
-	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:616)
-	... 6 common frames omitted
-Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
- at [Source: (byte[])"
-
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Execution exception</title>
-        <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAlFJREFUeNqUU8tOFEEUPVVdNV3dPe8xYRBnjGhmBgKjKzCIiQvBoIaNbly5Z+PSv3Aj7DSiP2B0rwkLGVdGgxITSCRIJGSMEQWZR3eVt5sEFBgTb/dN1yvnnHtPNTPG4PqdHgCMXnPRSZrpSuH8vUJu4DE4rYHDGAZDX62BZttHqTiIayM3gGiXQsgYLEvATaqxU+dy1U13YXapXptpNHY8iwn8KyIAzm1KBdtRZWErpI5lEWTXp5Z/vHpZ3"[truncated 7216 bytes]; line: 3, column: 2]
-	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1804)
-	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:693)
-	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:591)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2630)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._nextTokenNotInObject(UTF8StreamJsonParser.java:832)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:729)
-	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4141)
-	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4000)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3091)
-	at play.libs.ws.JsonBodyReadables.lambda$json$0(JsonBodyReadables.java:29)
-	... 10 common frames omitted
-2021-10-08 13:10:01,533 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-3 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2021-11-15 02:41:22,835 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-2 - Application started (Dev) (no global state)
+2021-11-15 02:41:56,711 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-4 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2021-10-08 13:10:01,534 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-3 - Application started (Dev) (no global state)
-2021-10-08 13:19:44,950 [ERROR] from application in application-akka.actor.default-dispatcher-10 - 
-
-! @7lae965m6 - Internal server error, for (GET) [/query12Handler?title=IEEE+Trans.+Services+Computing&volume=7&issue=2] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[CompletionException: java.lang.RuntimeException: Error parsing JSON from WS response wsBody]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:351)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:267)
-	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:448)
-	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:446)
-	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:412)
-	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:92)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:81)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:92)
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41)
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:49)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.util.concurrent.CompletionException: java.lang.RuntimeException: Error parsing JSON from WS response wsBody
-	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
-	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
-	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:618)
-	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:591)
-	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:457)
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
-	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1067)
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1703)
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
-Caused by: java.lang.RuntimeException: Error parsing JSON from WS response wsBody
-	at play.libs.ws.JsonBodyReadables.lambda$json$0(JsonBodyReadables.java:31)
-	at play.libs.ws.ahc.StandaloneAhcWSResponse.getBody(StandaloneAhcWSResponse.java:119)
-	at play.libs.ws.ahc.AhcWSResponse.asJson(AhcWSResponse.java:120)
-	at controllers.HomeController.lambda$q12Handler$1(HomeController.java:85)
-	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:616)
-	... 6 common frames omitted
-Caused by: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'ok': was expecting ('true', 'false' or 'null')
- at [Source: (byte[])"ok"; line: 1, column: 5]
-	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1804)
-	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:703)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._reportInvalidToken(UTF8StreamJsonParser.java:3532)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2627)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._nextTokenNotInObject(UTF8StreamJsonParser.java:832)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:729)
-	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4141)
-	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4000)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3091)
-	at play.libs.ws.JsonBodyReadables.lambda$json$0(JsonBodyReadables.java:29)
-	... 10 common frames omitted
-2021-10-08 13:23:03,905 [ERROR] from application in application-akka.actor.default-dispatcher-11 - 
-
-! @7lae9he4a - Internal server error, for (GET) [/query12Handler?title=IEEE+Trans.+Services+Computing&volume=7&issue=2] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[CompletionException: java.lang.RuntimeException: Error parsing JSON from WS response wsBody]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:351)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:267)
-	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:448)
-	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:446)
-	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:412)
-	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:92)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:81)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:92)
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41)
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:49)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.util.concurrent.CompletionException: java.lang.RuntimeException: Error parsing JSON from WS response wsBody
-	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
-	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
-	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:618)
-	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:591)
-	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:457)
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
-	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1067)
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1703)
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
-Caused by: java.lang.RuntimeException: Error parsing JSON from WS response wsBody
-	at play.libs.ws.JsonBodyReadables.lambda$json$0(JsonBodyReadables.java:31)
-	at play.libs.ws.ahc.StandaloneAhcWSResponse.getBody(StandaloneAhcWSResponse.java:119)
-	at play.libs.ws.ahc.AhcWSResponse.asJson(AhcWSResponse.java:120)
-	at controllers.HomeController.lambda$q12Handler$1(HomeController.java:85)
-	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:616)
-	... 6 common frames omitted
-Caused by: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'ok': was expecting ('true', 'false' or 'null')
- at [Source: (byte[])"ok"; line: 1, column: 5]
-	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1804)
-	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:703)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._reportInvalidToken(UTF8StreamJsonParser.java:3532)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2627)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._nextTokenNotInObject(UTF8StreamJsonParser.java:832)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:729)
-	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4141)
-	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4000)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3091)
-	at play.libs.ws.JsonBodyReadables.lambda$json$0(JsonBodyReadables.java:29)
-	... 10 common frames omitted
-2021-10-08 13:23:42,064 [ERROR] from application in application-akka.actor.default-dispatcher-12 - 
-
-! @7lae9jig0 - Internal server error, for (GET) [/query12Handler?title=IEEE+Trans.+Services+Computing&volume=9&issue=3] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[CompletionException: java.lang.RuntimeException: Error parsing JSON from WS response wsBody]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:351)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:267)
-	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:448)
-	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:446)
-	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:412)
-	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:92)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:81)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:92)
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41)
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:49)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.util.concurrent.CompletionException: java.lang.RuntimeException: Error parsing JSON from WS response wsBody
-	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
-	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
-	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:618)
-	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:591)
-	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:457)
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
-	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1067)
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1703)
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
-Caused by: java.lang.RuntimeException: Error parsing JSON from WS response wsBody
-	at play.libs.ws.JsonBodyReadables.lambda$json$0(JsonBodyReadables.java:31)
-	at play.libs.ws.ahc.StandaloneAhcWSResponse.getBody(StandaloneAhcWSResponse.java:119)
-	at play.libs.ws.ahc.AhcWSResponse.asJson(AhcWSResponse.java:120)
-	at controllers.HomeController.lambda$q12Handler$1(HomeController.java:85)
-	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:616)
-	... 6 common frames omitted
-Caused by: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'ok': was expecting ('true', 'false' or 'null')
- at [Source: (byte[])"ok"; line: 1, column: 5]
-	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1804)
-	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:703)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._reportInvalidToken(UTF8StreamJsonParser.java:3532)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2627)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._nextTokenNotInObject(UTF8StreamJsonParser.java:832)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:729)
-	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4141)
-	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4000)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3091)
-	at play.libs.ws.JsonBodyReadables.lambda$json$0(JsonBodyReadables.java:29)
-	... 10 common frames omitted
-2021-10-08 13:25:55,975 [ERROR] from application in application-akka.actor.default-dispatcher-13 - 
-
-! @7laea18ia - Internal server error, for (GET) [/query12Handler?title=IEEE+Trans.+Services+Computing&volume=9&issue=3] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[CompletionException: java.lang.RuntimeException: Error parsing JSON from WS response wsBody]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:351)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:267)
-	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:448)
-	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:446)
-	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:412)
-	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:92)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:81)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:92)
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41)
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:49)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.util.concurrent.CompletionException: java.lang.RuntimeException: Error parsing JSON from WS response wsBody
-	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
-	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
-	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:618)
-	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:591)
-	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:457)
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
-	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1067)
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1703)
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
-Caused by: java.lang.RuntimeException: Error parsing JSON from WS response wsBody
-	at play.libs.ws.JsonBodyReadables.lambda$json$0(JsonBodyReadables.java:31)
-	at play.libs.ws.ahc.StandaloneAhcWSResponse.getBody(StandaloneAhcWSResponse.java:119)
-	at play.libs.ws.ahc.AhcWSResponse.asJson(AhcWSResponse.java:120)
-	at controllers.HomeController.lambda$q12Handler$1(HomeController.java:85)
-	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:616)
-	... 6 common frames omitted
-Caused by: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'ok': was expecting ('true', 'false' or 'null')
- at [Source: (byte[])"ok"; line: 1, column: 5]
-	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1804)
-	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:703)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._reportInvalidToken(UTF8StreamJsonParser.java:3532)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2627)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._nextTokenNotInObject(UTF8StreamJsonParser.java:832)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:729)
-	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4141)
-	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4000)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3091)
-	at play.libs.ws.JsonBodyReadables.lambda$json$0(JsonBodyReadables.java:29)
-	... 10 common frames omitted
-2021-10-08 13:27:56,452 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-17 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2021-11-15 02:41:56,712 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-4 - Application started (Dev) (no global state)
+2021-11-15 02:44:05,833 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-3 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2021-10-08 13:27:56,455 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-17 - Application started (Dev) (no global state)
-2021-10-08 13:56:23,806 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-13 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2021-11-15 02:44:05,834 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-3 - Application started (Dev) (no global state)
+2021-11-15 02:45:30,356 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-6 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2021-10-08 13:56:23,810 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-13 - Application started (Dev) (no global state)
-2021-10-08 13:57:43,413 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-20 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2021-11-15 02:45:30,356 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-6 - Application started (Dev) (no global state)
+2021-11-15 02:45:57,252 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-6 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2021-10-08 13:57:43,415 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-20 - Application started (Dev) (no global state)
+2021-11-15 02:45:57,253 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-6 - Application started (Dev) (no global state)
+2021-11-15 02:46:08,657 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-2 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2021-11-15 02:46:08,658 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-2 - Application started (Dev) (no global state)
+2021-11-15 02:47:51,117 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-7 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2021-11-15 02:47:51,118 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-7 - Application started (Dev) (no global state)
+2021-11-15 02:49:50,250 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-3 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2021-11-15 02:49:50,252 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-3 - Application started (Dev) (no global state)

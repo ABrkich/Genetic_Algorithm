@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="server [file:/C:/Users/User/Desktop/8391/CS_8340_Lab4/Backend/]" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
+<module external.linked.project.id="server [file:/C:/Users/CJ/Desktop/8391/Lab4/Backend/]" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/../../target/scala-2.12/classes" />
     <output-test url="file://$MODULE_DIR$/../../target/scala-2.12/test-classes" />
@@ -148,11 +148,21 @@
     <orderEntry type="library" scope="TEST" name="sbt: org.specs2:specs2-matcher_2.12:4.5.1:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: org.specs2:specs2-mock_2.12:4.5.1:jar" level="project" />
     <orderEntry type="library" name="sbt: tyrex:tyrex:1.0.1:jar" level="project" />
+    <orderEntry type="module-library">
+      <library name="sbt: unmanaged-jars">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../lib/jgap-examples.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib/jgap-tests.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib/jgap.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib/json-20210307.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
     <orderEntry type="library" scope="TEST" name="sbt: xalan:serializer:2.7.2:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: xalan:xalan:2.7.2:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: xerces:xercesImpl:2.12.0:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: xml-apis:xml-apis:1.4.01:jar" level="project" />
-    <orderEntry type="library" name="jgap-examples" level="project" />
-    <orderEntry type="library" name="json-20210307" level="project" />
   </component>
 </module>

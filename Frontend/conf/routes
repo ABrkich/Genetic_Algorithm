@@ -5,5 +5,5 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index()
-GET     /query11Handler             controllers.HomeController.q11Handler()
-GET     /query11                    controllers.HomeController.query11()
+GET     /servicesHandler            controllers.HomeController.services()
+GET     /services                    controllers.HomeController.servicesHandler()

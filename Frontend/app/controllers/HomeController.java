@@ -31,16 +31,27 @@ public class HomeController extends Controller {
         this.formFactory = formFactory;
     }
 
+
+
     /**
      * Index page
+     *
      */
     public Result index() {
+        return ok(views.html.index.render(""));
+    }
+    public Result services() {
         return ok(views.html.login.render(""));
     }
 
-    public CompletionStage<Result> q11Handler(){
+    public Result servicesHandler(){
+        JsonNode test = ServicesResponse.getServices();
 
-        ServicesResponse.getServices().thenApplyAsync((WSResponse r)->{
+        System.out.println(test.get("Fitness"));
+
+        return ok(views.html.login.render(""));
+
+        /*ServicesResponse.getServices().thenApplyAsync((WSResponse r)->{
 
             if (r.getStatus() == 200 && r.asJson() != null) {
 
@@ -61,13 +72,13 @@ public class HomeController extends Controller {
                 }
 
 
-                return ok(views.html.service.render(outString));
+                return ok(views.html.services.render(outString));
             }
             else{
-                return ok(views.html.service.render("No Title By That name"));
+                return ok(views.html.services.render("No Title By That name"));
             }
 
-        });
+        });*/
     }
 
 }

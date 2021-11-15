@@ -64,8 +64,8 @@ Seq[Any](format.raw/*1.19*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2021-10-06T10:51:47.043
-                  SOURCE: C:/Users/User/Desktop/8391/lab2/Frontend/app/views/index.scala.html
+                  DATE: 2021-11-15T02:06:22.025
+                  SOURCE: C:/Users/CJ/Desktop/8391/Lab4/Frontend/app/views/index.scala.html
                   HASH: b341f8272ca1f98330c30c30b882125d527a5587
                   MATRIX: 948->1|1038->25|1105->18|1137->64|1483->383|1511->390
                   LINES: 28->1|31->2|34->1|35->3|45->13|45->13

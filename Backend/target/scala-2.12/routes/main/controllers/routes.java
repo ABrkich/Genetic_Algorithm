@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Users/User/Desktop/8391/CS_8340_Lab4/Backend/conf/routes
-// @DATE:Fri Nov 12 12:57:50 CST 2021
+// @SOURCE:C:/Users/CJ/Desktop/8391/Lab4/Backend/conf/routes
+// @DATE:Mon Nov 15 01:47:23 CST 2021
 
 package controllers;
 

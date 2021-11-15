@@ -50,9 +50,10 @@ public class ServiceDecider {
    */
   private static final int MAX_ALLOWED_EVOLUTIONS = 50;
 
-  public static void serviceGenes() throws InvalidConfigurationException {
-
+  public static JSONObject serviceGenes() throws InvalidConfigurationException {
+    Configuration.reset();
     Configuration conf = new DefaultConfiguration();
+
     conf.setPreservFittestIndividual(true);
     conf.setKeepPopulationSizeConstant(false);
 
@@ -81,30 +82,43 @@ public class ServiceDecider {
 
     //begin iteration life cycle
     double bestValue = 100000;
+    double v1 = 0.0;
+    int[] servicesList = new int[3];
     //100 iteration life cycle
     for (int i = 0; i < 100; i++)
     {
       //for each chromosome
       //calculate fitness (this is built it see bestSolutionSoFar)
       IChromosome bestSolutionSoFar = population.getFittestChromosome();
-      double v1 = bestSolutionSoFar.getFitnessValue();
-      System.out.println("The best solution has a fitness value of " +
-              bestSolutionSoFar.getFitnessValue());
+      v1 = bestSolutionSoFar.getFitnessValue();
       bestSolutionSoFar.setFitnessValueDirectly(-1);
-      int[] servicesList = new int[3];
-      servicesList = ServiceFitnessFunction.listOfServices(bestSolutionSoFar);
-
-      System.out.println("Service 1 is S1" + servicesList[0]);
-      System.out.println("Service 2 is S2" + servicesList[1]);
-      System.out.println("Service 3 is S3" + servicesList[2]);
 
       //compare to bestValue
       if (v1 < bestValue) { bestValue = v1; }
+      servicesList = ServiceFitnessFunction.listOfServices(bestSolutionSoFar);
 
       //breed
       //mutate
       population.evolve();
     }
+
+    JSONObject outjson = new JSONObject();
+
+    IChromosome bestSolutionSoFar = population.getFittestChromosome();
+
+
+    System.out.println("Fittest services");
+    System.out.println("Fitness is " + v1);
+    System.out.println("Service 1 is S1" + servicesList[0]);
+    System.out.println("Service 2 is S2" + servicesList[1]);
+    System.out.println("Service 3 is S3" + servicesList[2]);
+
+    outjson.put("Fitness", v1);
+    outjson.put("Services", servicesList);
+
+    return outjson;
+
+
   }
 
 

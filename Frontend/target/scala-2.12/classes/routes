@@ -5,23 +5,5 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index()
-GET     /query11Handler             controllers.HomeController.q11Handler()
-GET     /query11                    controllers.HomeController.query11()
-GET     /query12Handler             controllers.HomeController.q12Handler()
-GET     /query12                    controllers.HomeController.query12()
-GET     /query13Handler             controllers.HomeController.q13Handler()
-GET     /query13                    controllers.HomeController.query13()
-GET     /query14Handler             controllers.HomeController.q14Handler()
-GET     /query14                    controllers.HomeController.query14()
-GET     /query15Handler             controllers.HomeController.q15Handler()
-GET     /query15                    controllers.HomeController.query15()
-GET     /query21Handler             controllers.HomeController.q21Handler()
-GET     /query21                    controllers.HomeController.query21()
-GET     /query22Handler             controllers.HomeController.q22Handler()
-GET     /query22                    controllers.HomeController.query22()
-GET     /query23Handler             controllers.HomeController.q23Handler()
-GET     /query23                    controllers.HomeController.query23()
-
-
-# Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET     /servicesHandler            controllers.HomeController.services()
+GET     /services                    controllers.HomeController.servicesHandler()

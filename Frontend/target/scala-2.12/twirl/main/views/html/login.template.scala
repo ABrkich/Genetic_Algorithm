@@ -91,60 +91,10 @@ Seq[Any](format.raw/*1.28*/("""
 
         <div class="grid-container">
             <div class="grid-item">
-                <form action = """"),_display_(/*62.34*/routes/*62.40*/.HomeController.query11()),format.raw/*62.65*/("""" method="GET">
+                <form action = """"),_display_(/*62.34*/routes/*62.40*/.HomeController.services()),format.raw/*62.66*/("""" method="GET">
                     <button id="api-get-page"  class="button" type="submit">1.1 Paper Search</button>
                 </form>
 
-            </div>
-
-            <div class="grid-item">
-                <form action = """"),_display_(/*69.34*/routes/*69.40*/.HomeController.query12()),format.raw/*69.65*/("""" method="GET">
-                    <button id="api-get-page" class="button" type="submit">1.2 Journal Search</button>
-                </form>
-            </div>
-            <div class="grid-item">
-                <form action = """"),_display_(/*74.34*/routes/*74.40*/.HomeController.query13()),format.raw/*74.65*/("""" method="GET">
-                    <button id="api-get-page" class="button" type="submit">1.3 Author Title Search</button>
-                </form>
-            </div>
-            <div class="grid-item">
-                <form action = """"),_display_(/*79.34*/routes/*79.40*/.HomeController.query14()),format.raw/*79.65*/("""" method="GET">
-                    <button id="api-get-page" class="button" type="submit">1.4 Authors With 10+ Papers</button>
-                </form>
-            </div>
-            <div class="grid-item"></div>
-            <div class="grid-item">
-                <form action = """"),_display_(/*85.34*/routes/*85.40*/.HomeController.query15()),format.raw/*85.65*/("""" method="GET">
-                    <button id="api-get-page" class="button" type="submit">1.5 Conference Location Search</button>
-                </form>
-            </div>
-        </div>
-
-
-        <header class="topbar">
-            <h1 class="focused" style="font-size: 37px;
-                color: #57a957">
-                <strong>Part 2 Queries</strong>
-            </h1>
-        </header>
-
-
-        <div class="grid-container">
-            <div class="grid-item">
-                <form action = """"),_display_(/*102.34*/routes/*102.40*/.HomeController.query21()),format.raw/*102.65*/("""" method="GET">
-                    <button id="api-get-page" class="button" type="submit">2.1 Author Paper Search</button>
-                </form>
-            </div>
-
-            <div class="grid-item">
-                <form action = """"),_display_(/*108.34*/routes/*108.40*/.HomeController.query22()),format.raw/*108.65*/("""" method="GET">
-                    <button id="api-get-page" class="button" type="submit">2.2 Productive Authors Co-Authors</button>
-                </form>
-            </div>
-            <div class="grid-item">
-                <form action = """"),_display_(/*113.34*/routes/*113.40*/.HomeController.query23()),format.raw/*113.65*/("""" method="GET">
-                    <button id="api-get-page" class="button" type="submit">2.3 Map of Conference Locations</button>
-                </form>
             </div>
         </div>
     </body>
@@ -165,11 +115,11 @@ Seq[Any](format.raw/*1.28*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2021-10-06T10:51:47.078
-                  SOURCE: C:/Users/User/Desktop/8391/lab2/Frontend/app/views/login.scala.html
-                  HASH: bab41ff672704d9adcc5f7491b8ab5ced5a47d6b
-                  MATRIX: 948->1|1069->27|1097->29|1188->93|1216->94|1257->108|1428->252|1457->253|1496->265|1535->276|1564->277|1606->291|1827->485|1856->486|1895->498|1931->506|1960->507|2002->521|2359->851|2388->852|2421->858|3980->2392|3995->2398|4041->2423|4307->2662|4322->2668|4368->2693|4631->2929|4646->2935|4692->2960|4960->3201|4975->3207|5021->3232|5336->3520|5351->3526|5397->3551|5946->4072|5962->4078|6009->4103|6280->4346|6296->4352|6343->4377|6622->4628|6638->4634|6685->4659
-                  LINES: 28->1|33->1|34->2|38->6|38->6|39->7|43->11|43->11|45->13|45->13|45->13|46->14|51->19|51->19|53->21|53->21|53->21|54->22|64->32|64->32|65->33|94->62|94->62|94->62|101->69|101->69|101->69|106->74|106->74|106->74|111->79|111->79|111->79|117->85|117->85|117->85|134->102|134->102|134->102|140->108|140->108|140->108|145->113|145->113|145->113
+                  DATE: 2021-11-15T02:09:41.401
+                  SOURCE: C:/Users/CJ/Desktop/8391/Lab4/Frontend/app/views/login.scala.html
+                  HASH: 30cd9f45849db66085cdb32db6a386fd18a14c95
+                  MATRIX: 948->1|1069->27|1097->29|1188->93|1216->94|1257->108|1428->252|1457->253|1496->265|1535->276|1564->277|1606->291|1827->485|1856->486|1895->498|1931->506|1960->507|2002->521|2359->851|2388->852|2421->858|3980->2392|3995->2398|4042->2424
+                  LINES: 28->1|33->1|34->2|38->6|38->6|39->7|43->11|43->11|45->13|45->13|45->13|46->14|51->19|51->19|53->21|53->21|53->21|54->22|64->32|64->32|65->33|94->62|94->62|94->62
                   -- GENERATED --
               */
           

@@ -1,40 +1,44 @@
 package controllers;
 
-import com.fasterxml.jackson.databind.node.ObjectNode;
-import play.libs.Json;
-import play.libs.ws.WSClient;
-import play.libs.ws.WSRequest;
-import play.libs.ws.WSResponse;
 
-import java.util.concurrent.CompletionStage;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.lang.reflect.Array;
+import java.net.URL;
+import java.net.URLConnection;
 
 public class ServicesResponse {
 
-    private String Service1;
-    private String Service2;
-    private String Service3;
-    private double fitness;
+    public static JsonNode getServices() {
 
-    public String getService1(){return this.Service1;}
-    public String getService2(){return this.Service2;}
-    public String getService3(){return this.Service3;}
-    public double getFitness(){return this.fitness;}
+        try {
+            URL url = new URL("http://localhost:9005/services");
 
-    public static CompletionStage<WSResponse> getServices() {
+            URLConnection connection = null;
 
-        WSClient ws = play.test.WSTestClient.newClient(9005);
-        //add username password
-        WSRequest request = ws.url("http://localhost:9005/services");
-        ObjectNode res = Json.newObject();
-        res.put("Service 1", this.Service1);
-        res.put("Service 2", this.Service2);
-        res.put("Service 3", this.Service3);
-        res.put("fitness", this.fitness);
-        return request.addHeader("Content-Type", "application/json")
-                .post(res)
-                .thenApply((WSResponse r) -> {
-                    return r;
-                });
+            connection = url.openConnection();
+
+
+            BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            String i = br.readLine();
+
+            ObjectMapper mapper = new ObjectMapper();
+            JsonNode outNode = mapper.readTree(i);
+
+            System.out.println(outNode);
+
+            return outNode;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 
 }
