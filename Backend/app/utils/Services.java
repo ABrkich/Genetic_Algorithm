@@ -77,24 +77,24 @@ public class Services {
 
         JSONObject S24 = new JSONObject();
         S24.put("name", "4");
-        S24.put("cost", 0);
-        S24.put("reliability", 0);
-        S24.put("time", 0);
-        S24.put("availability", 0);
+        S24.put("cost", 0.1);
+        S24.put("reliability", 1);
+        S24.put("time", 0.1);
+        S24.put("availability", 1);
 
         JSONObject S25 = new JSONObject();
         S25.put("name", "5");
-        S25.put("cost", 0);
-        S25.put("reliability", 0);
-        S25.put("time", 0);
-        S25.put("availability", 0);
+        S25.put("cost", 0.1);
+        S25.put("reliability", 1);
+        S25.put("time", 0.1);
+        S25.put("availability", 1);
 
         JSONObject S26 = new JSONObject();
         S26.put("name", "6");
-        S26.put("cost", 0);
-        S26.put("reliability", 0);
-        S26.put("time", 0);
-        S26.put("availability", 0);
+        S26.put("cost", 0.1);
+        S26.put("reliability", 1);
+        S26.put("time", 0.1);
+        S26.put("availability", 1);
 
         //read in S3 services
         JSONObject S31 = new JSONObject();

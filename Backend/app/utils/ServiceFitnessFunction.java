@@ -73,16 +73,11 @@ class ServiceFitnessFunction
     double S3reliability = getServiceValues("reliability","S3",servicesList[2]);
     double S3availability = getServiceValues("availability","S3",servicesList[2]);
 
-    fitness += (10*S1reliability + 35*S1availability)/(35*S1cost + 20*S1time);
+    fitness += (S1reliability + S1availability)/(S1cost + S1time);
 
 
-    double S2check = (10*S2reliability + 35*S2availability)/(35*S2cost + 20*S2time);
-    if (S2check!=S2check){
-      fitness += 5;
-    }else{
-      fitness += S2check;
-    }
-    fitness += (10*S3reliability + 35*S3availability)/(35*S3cost + 20*S3time);
+    fitness += (S2reliability + S2availability)/(S2cost + S2time);
+    fitness += (S3reliability + S3availability)/(S3cost + S3time);
     return fitness;
   }
 

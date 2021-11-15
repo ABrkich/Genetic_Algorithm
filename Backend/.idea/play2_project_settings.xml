@@ -6,8 +6,8 @@
         <entry key="server">
           <value>
             <ProjectSettingsEntry>
-              <option name="sourceDir" value="C:\Users\User\Desktop\8391\CS_8340_Lab4\Backend\app" />
-              <option name="confDir" value="C:\Users\CJ\Desktop\8391\Lab4\Backend\app" />
+              <option name="sourceDir" value="C:\Users\CJ\Desktop\8391\Lab4\Backend\app" />
+              <option name="confDir" value="C:\Users\User\Desktop\8391\Genetic_Algorithm\Backend\app" />
               <option name="playDistrPath" value="$USER_HOME$/.ivy2/cache/com.typesafe.play/play_2.12/jars/play_2.12-2.7.3.jar" />
               <option name="templateImports">
                 <list>
@@ -31,7 +31,7 @@
                   <option value="controllers.Assets.Asset" />
                 </list>
               </option>
-              <option name="uri" value="/C:/Users/CJ/Desktop/8391/Lab4/Backend" />
+              <option name="uri" value="/C:/Users/User/Desktop/8391/Genetic_Algorithm/Backend" />
             </ProjectSettingsEntry>
           </value>
         </entry>

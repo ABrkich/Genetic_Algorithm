@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Users/CJ/Desktop/8391/Lab4/Backend/conf/routes
-// @DATE:Mon Nov 15 01:47:23 CST 2021
+// @SOURCE:C:/Users/User/Desktop/8391/Genetic_Algorithm/Backend/conf/routes
+// @DATE:Mon Nov 15 11:10:10 CST 2021
 
 package router
 

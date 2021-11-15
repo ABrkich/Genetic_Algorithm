@@ -2,15 +2,51 @@
     @import java.math.BigInteger;var i = 0
 <!DOCTYPE html>
 <html>
+
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 5px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+
     <body>
 
         <header class="topbar">
             <h1 class="focused" style="font-size: 37px;
                 color: #57a957">
-                <strong>Login Message</strong>
+                <strong>Lab 4 Genetic Algorithm</strong>
             </h1>
             <p class="focused" style="font-size: 20px;
                 color: #3F51B5">@message</p>
+
+
+            <form action = "@routes.HomeController.services()" method="GET">
+                 <button id="api-get-page"  class="button" type="submit">1.1 Paper Search</button>
+            </form>
 
         </header>
 

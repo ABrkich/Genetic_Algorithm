@@ -38,7 +38,7 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.7 {default=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.7 {default=[default(compile)]}
 [info] Resolving org.scala-sbt#main;0.13.17 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#main;0.13.17 {compile=[default(compile)]}
-[debug] no default cache defined: set to C:\Users\CJ\.ivy2\cache
+[debug] no default cache defined: set to C:\Users\User\.ivy2\cache
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#main;0.13.17
 [debug] 	found org.scala-sbt#main;0.13.17 in sbt-chain
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.7 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.7 {compile=[default(compile)]}
@@ -3350,9 +3350,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.17!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
-[debug] :: resolution report :: resolve 393ms :: artifacts dl 35ms
-[debug] 	report for server#server$sbt_2.10;1.0 default produced in C:\Users\CJ\Desktop\8391\Lab4\Backend\target\scala-2.12\resolution-cache\reports\server-server$sbt_2.10-default.xml
-[debug] 	resolve done (393ms resolve - 35ms download)
+[debug] :: resolution report :: resolve 588ms :: artifacts dl 45ms
+[debug] 	report for server#server$sbt_2.10;1.0 default produced in C:\Users\User\Desktop\8391\Genetic_Algorithm\Backend\target\scala-2.12\resolution-cache\reports\server-server$sbt_2.10-default.xml
+[debug] 	resolve done (588ms resolve - 45ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: server#server$sources_2.10;1.0
 [debug] 	confs: [default]
@@ -4750,6 +4750,6 @@
 [debug] 	[NOT REQUIRED] io.apigee.trireme#trireme-core;0.9.4!trireme-core.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-exceptions;2.7.3!play-exceptions.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#persist;0.13.17!persist.jar(src)
-[debug] :: resolution report :: resolve 127ms :: artifacts dl 30ms
-[debug] 	report for server#server$sources_2.10;1.0 default produced in C:\Users\CJ\Desktop\8391\Lab4\Backend\target\scala-2.12\resolution-cache\reports\server-server$sources_2.10-default.xml
-[debug] 	resolve done (127ms resolve - 30ms download)
+[debug] :: resolution report :: resolve 233ms :: artifacts dl 40ms
+[debug] 	report for server#server$sources_2.10;1.0 default produced in C:\Users\User\Desktop\8391\Genetic_Algorithm\Backend\target\scala-2.12\resolution-cache\reports\server-server$sources_2.10-default.xml
+[debug] 	resolve done (233ms resolve - 40ms download)

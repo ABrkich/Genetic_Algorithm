@@ -34,15 +34,51 @@ object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
 Seq[Any](format.raw/*1.19*/("""
     """),format.raw/*3.1*/("""<!DOCTYPE html>
 <html>
+
+    <style>
+        .grid-container """),format.raw/*7.25*/("""{"""),format.raw/*7.26*/("""
+            """),format.raw/*8.13*/("""display: grid;
+            grid-template-columns: auto auto auto;
+            background-color: #2196F3;
+            padding: 10px;
+        """),format.raw/*12.9*/("""}"""),format.raw/*12.10*/("""
+
+        """),format.raw/*14.9*/(""".grid-item """),format.raw/*14.20*/("""{"""),format.raw/*14.21*/("""
+            """),format.raw/*15.13*/("""background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 5px;
+            font-size: 30px;
+            text-align: center;
+        """),format.raw/*20.9*/("""}"""),format.raw/*20.10*/("""
+
+        """),format.raw/*22.9*/(""".button """),format.raw/*22.17*/("""{"""),format.raw/*22.18*/("""
+            """),format.raw/*23.13*/("""background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        """),format.raw/*33.9*/("""}"""),format.raw/*33.10*/("""
+    """),format.raw/*34.5*/("""</style>
+
     <body>
 
         <header class="topbar">
             <h1 class="focused" style="font-size: 37px;
                 color: #57a957">
-                <strong>Login Message</strong>
+                <strong>Lab 4 Genetic Algorithm</strong>
             </h1>
             <p class="focused" style="font-size: 20px;
-                color: #3F51B5">"""),_display_(/*13.34*/message),format.raw/*13.41*/("""</p>
+                color: #3F51B5">"""),_display_(/*44.34*/message),format.raw/*44.41*/("""</p>
+
+
+            <form action = """"),_display_(/*47.30*/routes/*47.36*/.HomeController.services()),format.raw/*47.62*/("""" method="GET">
+                 <button id="api-get-page"  class="button" type="submit">1.1 Paper Search</button>
+            </form>
 
         </header>
 
@@ -64,11 +100,11 @@ Seq[Any](format.raw/*1.19*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2021-11-15T02:06:22.025
-                  SOURCE: C:/Users/CJ/Desktop/8391/Lab4/Frontend/app/views/index.scala.html
-                  HASH: b341f8272ca1f98330c30c30b882125d527a5587
-                  MATRIX: 948->1|1038->25|1105->18|1137->64|1483->383|1511->390
-                  LINES: 28->1|31->2|34->1|35->3|45->13|45->13
+                  DATE: 2021-11-15T11:22:12.038
+                  SOURCE: C:/Users/User/Desktop/8391/Genetic_Algorithm/Frontend/app/views/index.scala.html
+                  HASH: 9340b1e3b3081d3990a93c516ddcfcac89b90e3e
+                  MATRIX: 948->1|1038->25|1105->18|1137->64|1228->128|1256->129|1297->143|1468->287|1497->288|1536->300|1575->311|1604->312|1646->326|1867->520|1896->521|1935->533|1971->541|2000->542|2042->556|2399->886|2428->887|2461->893|2804->1209|2832->1216|2898->1255|2913->1261|2960->1287
+                  LINES: 28->1|31->2|34->1|35->3|39->7|39->7|40->8|44->12|44->12|46->14|46->14|46->14|47->15|52->20|52->20|54->22|54->22|54->22|55->23|65->33|65->33|66->34|76->44|76->44|79->47|79->47|79->47
                   -- GENERATED --
               */
           

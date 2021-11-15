@@ -1,19 +1,13 @@
 package controllers;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import play.data.Form;
 import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.libs.concurrent.HttpExecutionContext;
-import play.libs.ws.WSResponse;
-import views.html.*;
 
 import javax.inject.Inject;
-import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
-import java.util.concurrent.CompletionStage;
 
 /**
  * Software Service Market Place
@@ -41,15 +35,35 @@ public class HomeController extends Controller {
         return ok(views.html.index.render(""));
     }
     public Result services() {
-        return ok(views.html.login.render(""));
+
+        JsonNode response = ServicesResponse.getServices();
+        String fitnessText = "The Fitness is " + response.get("Fitness");
+
+        JsonNode responseServices = response.get("Services");
+
+        String servicesText = null;
+        if(responseServices.isArray()){
+
+            servicesText = "The best route chose is S1" + responseServices.get(0) + " to ";
+            if(responseServices.get(1).intValue() == 1|| responseServices.get(1).intValue() == 2 || responseServices.get(1).intValue() == 3 ){
+
+                servicesText += "S2" + responseServices.get(1) + " to ";
+
+            }
+
+            servicesText += "S3" + responseServices.get(2);
+
+        }
+
+
+
+        return ok(views.html.services.render(fitnessText,servicesText));
     }
 
     public Result servicesHandler(){
         JsonNode test = ServicesResponse.getServices();
 
-        System.out.println(test.get("Fitness"));
-
-        return ok(views.html.login.render(""));
+        return ok(views.html.services.render("",""));
 
         /*ServicesResponse.getServices().thenApplyAsync((WSResponse r)->{
 

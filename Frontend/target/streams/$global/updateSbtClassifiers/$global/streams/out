@@ -33,6 +33,7 @@
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.17->org.scala-sbt#main;0.13.17 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.7 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.7 {compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.7 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.7 {compile=[default(compile)]}
+[debug] no default cache defined: set to C:\Users\User\.ivy2\cache
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.7 {default=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.7 {default=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.7 {default=[default(compile)]} => dependency: org.scala-lang#scala-compiler;2.10.7 {default=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.7 {default=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.7 {default=[default(compile)]}
@@ -3349,9 +3350,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.17!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
-[debug] :: resolution report :: resolve 345ms :: artifacts dl 29ms
-[debug] 	report for client#client$sbt_2.10;1.0 default produced in C:\Users\CJ\Desktop\8391\Lab4\Frontend\target\scala-2.12\resolution-cache\reports\client-client$sbt_2.10-default.xml
-[debug] 	resolve done (345ms resolve - 29ms download)
+[debug] :: resolution report :: resolve 495ms :: artifacts dl 39ms
+[debug] 	report for client#client$sbt_2.10;1.0 default produced in C:\Users\User\Desktop\8391\Genetic_Algorithm\Frontend\target\scala-2.12\resolution-cache\reports\client-client$sbt_2.10-default.xml
+[debug] 	resolve done (495ms resolve - 39ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: client#client$sources_2.10;1.0
 [debug] 	confs: [default]
@@ -4749,8 +4750,6 @@
 [debug] 	[NOT REQUIRED] io.apigee.trireme#trireme-core;0.9.4!trireme-core.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-exceptions;2.7.3!play-exceptions.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#persist;0.13.17!persist.jar(src)
-[debug] :: resolution report :: resolve 110ms :: artifacts dl 28ms
-[debug] 	report for client#client$sources_2.10;1.0 default produced in C:\Users\CJ\Desktop\8391\Lab4\Frontend\target\scala-2.12\resolution-cache\reports\client-client$sources_2.10-default.xml
-[debug] 	resolve done (110ms resolve - 28ms download)
-fault.xml
-[debug] 	resolve done (140ms resolve - 33ms download)
+[debug] :: resolution report :: resolve 214ms :: artifacts dl 36ms
+[debug] 	report for client#client$sources_2.10;1.0 default produced in C:\Users\User\Desktop\8391\Genetic_Algorithm\Frontend\target\scala-2.12\resolution-cache\reports\client-client$sources_2.10-default.xml
+[debug] 	resolve done (214ms resolve - 36ms download)
