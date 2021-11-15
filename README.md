@@ -8,10 +8,14 @@ The Fitness Function is normalized with the greatest value being 1, and the smal
 Our equation for the Fitness Function is as follows:
 - (reliability + availability) / (cost + time)
 
-Using this method, a fitness closer to 1 is better than a fitness closer to 0. 
-If cost and time are small, this makes the number higher, leading toward a fitness closer to 1.
-If reliability and availability are small, this makes the number lower, leading toward a fitness closer to 0.
-We think this is a great equation to determine the fitness of the services provided.
+The fitness of a chromosome is determined by having as large of a value as possible because of this we wanted to choose a fitness function that selected as small of a cost and time as possible and as large of a reliability and availability as possible.
+
+The above function is applied to each gene separately and then the sum of those is used as the overall fitness. 
+For the services we decided to normalize them by their top level designations. This places all the values between 0 and 1 and allows us
+to not over weight a service in S1 because a service in S3 has a high value.
+For gene for S2 we added 3 null services that represent the recommender choosing to skip service 2 all
+together. These three services have a very low cost and time (0.1 to avoid dividing my zero error) and the largest possible value of 1 for availability and reliability.
+This is because it costs nothing and takes no time if we don't go to S2 and this option requires no availability or maintenence. 
 
 
 # Genes
@@ -22,7 +26,8 @@ In our Algorithm, we define three seperate genes:
 - a gene for S3
 
 When our algorithm runs, our chromoses get assigned random values for each of these three genes based on the sample input.
-To simulate 'skipping' S2, we have given S2 a 50% chance to return NaN. If S2 gets assigned NaN, our fitness function will make the S2 value high enough to have a good fitness. This is to simulate S1 directly to S3 having a better fitness than S1 to S2 to S3.
+To simulate 'skipping' S2, we added 3 null services that represent the recommender choosing to skip service 2 all
+together. These three services have a very low cost and time (0.1 to avoid dividing my zero error). This is to simulate S1 directly to S3 having a better fitness than S1 to S2 to S3.
 
 # Chromosomes
 

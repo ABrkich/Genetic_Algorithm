@@ -44,7 +44,7 @@ public class HomeController extends Controller {
         String servicesText = null;
         if(responseServices.isArray()){
 
-            servicesText = "The best route chose is S1" + responseServices.get(0) + " to ";
+            servicesText = "The best route to chose is S1" + responseServices.get(0) + " to ";
             if(responseServices.get(1).intValue() == 1|| responseServices.get(1).intValue() == 2 || responseServices.get(1).intValue() == 3 ){
 
                 servicesText += "S2" + responseServices.get(1) + " to ";
@@ -65,34 +65,6 @@ public class HomeController extends Controller {
 
         return ok(views.html.services.render("",""));
 
-        /*ServicesResponse.getServices().thenApplyAsync((WSResponse r)->{
-
-            if (r.getStatus() == 200 && r.asJson() != null) {
-
-                String outString = "";
-
-                JsonNode response = r.asJson();
-
-                Iterator it = response.fieldNames();
-                System.out.println(response.fields());
-
-                while(it.hasNext()){
-                    String key = it.next().toString();
-                    JsonNode value = response.get(key);
-                    System.out.println(value.toString());
-                    if(value.toString() != "null"){
-                        outString += key +":\t" + value + "\n";
-                    }
-                }
-
-
-                return ok(views.html.services.render(outString));
-            }
-            else{
-                return ok(views.html.services.render("No Title By That name"));
-            }
-
-        });*/
     }
 
 }

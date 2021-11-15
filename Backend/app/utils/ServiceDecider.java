@@ -9,38 +9,13 @@ package utils;/*
  */
 
 import org.jgap.*;
-import org.jgap.audit.EvolutionMonitor;
-import org.jgap.data.DataTreeBuilder;
-import org.jgap.data.IDataCreators;
+
 import org.jgap.impl.DefaultConfiguration;
 import org.jgap.impl.IntegerGene;
-import org.jgap.xml.XMLDocumentBuilder;
-import org.jgap.xml.XMLManager;
+
 import org.json.JSONObject;
-import org.w3c.dom.Document;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 
-/**
- * This class provides an implementation of the classic "Make change" problem
- * using a genetic algorithm. The goal of the problem is to provide a
- * specified amount of change (from a cash purchase) in the fewest coins
- * possible. This example implementation uses American currency (quarters,
- * dimes, nickels, and pennies).
- * <p>
- * This example may be seen as somewhat significant because it demonstrates
- * the use of a genetic algorithm in a less-than-optimal problem space.
- * The genetic algorithm does best when there is a smooth slope of fitness
- * over the problem space towards the optimum solution. This problem exhibits
- * a more choppy space with more local optima. However, as can be seen from
- * running this example, the genetic algorithm still will get the correct
- * (or a very close) answer virtually everytime.
- *
- * @author Neil Rotstan
- * @author Klaus Meffert
- * @since 1.0
- */
 public class ServiceDecider {
   /** String containing the CVS revision. Read out via reflection!*/
   private final static String CVS_REVISION = "$Revision: 1.27 $";

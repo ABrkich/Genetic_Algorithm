@@ -77,7 +77,7 @@ Seq[Any](format.raw/*1.19*/("""
 
 
             <form action = """"),_display_(/*47.30*/routes/*47.36*/.HomeController.services()),format.raw/*47.62*/("""" method="GET">
-                 <button id="api-get-page"  class="button" type="submit">1.1 Paper Search</button>
+                 <button id="api-get-page"  class="button" type="submit">Run Service Recommendation</button>
             </form>
 
         </header>
@@ -100,9 +100,9 @@ Seq[Any](format.raw/*1.19*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2021-11-15T11:22:12.038
-                  SOURCE: C:/Users/User/Desktop/8391/Genetic_Algorithm/Frontend/app/views/index.scala.html
-                  HASH: 9340b1e3b3081d3990a93c516ddcfcac89b90e3e
+                  DATE: 2021-11-15T16:06:35.336
+                  SOURCE: C:/Users/CJ/Desktop/8391/Lab4/Frontend/app/views/index.scala.html
+                  HASH: cb70534826fc8d060459dd9d7ed1a9978dd8a68a
                   MATRIX: 948->1|1038->25|1105->18|1137->64|1228->128|1256->129|1297->143|1468->287|1497->288|1536->300|1575->311|1604->312|1646->326|1867->520|1896->521|1935->533|1971->541|2000->542|2042->556|2399->886|2428->887|2461->893|2804->1209|2832->1216|2898->1255|2913->1261|2960->1287
                   LINES: 28->1|31->2|34->1|35->3|39->7|39->7|40->8|44->12|44->12|46->14|46->14|46->14|47->15|52->20|52->20|54->22|54->22|54->22|55->23|65->33|65->33|66->34|76->44|76->44|79->47|79->47|79->47
                   -- GENERATED --
